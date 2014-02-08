@@ -22,6 +22,10 @@
 		1F5EAC1818A470C30080B598 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5EABFC18A470C20080B598 /* CoreData.framework */; };
 		1F5EAC2018A470C30080B598 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F5EAC1E18A470C30080B598 /* InfoPlist.strings */; };
 		1F5EAC2218A470C30080B598 /* DailyGoalsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAC2118A470C30080B598 /* DailyGoalsTests.m */; };
+		1F5EAC2D18A471140080B598 /* GoalListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAC2C18A471140080B598 /* GoalListViewController.m */; };
+		1F5EAC3018A471220080B598 /* AddGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAC2F18A471220080B598 /* AddGoalViewController.m */; };
+		1F5EAC3318A471440080B598 /* TheBackgrounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAC3218A471440080B598 /* TheBackgrounds.m */; };
+		1F5EAC3518A471A20080B598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5EAC3418A471A20080B598 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,13 @@
 		1F5EAC1D18A470C30080B598 /* DailyGoalsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DailyGoalsTests-Info.plist"; sourceTree = "<group>"; };
 		1F5EAC1F18A470C30080B598 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1F5EAC2118A470C30080B598 /* DailyGoalsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyGoalsTests.m; sourceTree = "<group>"; };
+		1F5EAC2B18A471140080B598 /* GoalListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalListViewController.h; sourceTree = "<group>"; };
+		1F5EAC2C18A471140080B598 /* GoalListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalListViewController.m; sourceTree = "<group>"; };
+		1F5EAC2E18A471220080B598 /* AddGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGoalViewController.h; sourceTree = "<group>"; };
+		1F5EAC2F18A471220080B598 /* AddGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGoalViewController.m; sourceTree = "<group>"; };
+		1F5EAC3118A471440080B598 /* TheBackgrounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheBackgrounds.h; sourceTree = "<group>"; };
+		1F5EAC3218A471440080B598 /* TheBackgrounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheBackgrounds.m; sourceTree = "<group>"; };
+		1F5EAC3418A471A20080B598 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +126,17 @@
 		1F5EABFE18A470C20080B598 /* DailyGoals */ = {
 			isa = PBXGroup;
 			children = (
+				1F5EAC3418A471A20080B598 /* Main.storyboard */,
 				1F5EAC0718A470C30080B598 /* AppDelegate.h */,
 				1F5EAC0818A470C30080B598 /* AppDelegate.m */,
 				1F5EAC0D18A470C30080B598 /* Images.xcassets */,
 				1F5EAC0A18A470C30080B598 /* DailyGoals.xcdatamodeld */,
+				1F5EAC2B18A471140080B598 /* GoalListViewController.h */,
+				1F5EAC2C18A471140080B598 /* GoalListViewController.m */,
+				1F5EAC2E18A471220080B598 /* AddGoalViewController.h */,
+				1F5EAC2F18A471220080B598 /* AddGoalViewController.m */,
+				1F5EAC3118A471440080B598 /* TheBackgrounds.h */,
+				1F5EAC3218A471440080B598 /* TheBackgrounds.m */,
 				1F5EABFF18A470C20080B598 /* Supporting Files */,
 			);
 			path = DailyGoals;
@@ -228,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F5EAC3518A471A20080B598 /* Main.storyboard in Resources */,
 				1F5EAC0318A470C30080B598 /* InfoPlist.strings in Resources */,
 				1F5EAC0E18A470C30080B598 /* Images.xcassets in Resources */,
 			);
@@ -249,8 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F5EAC0918A470C30080B598 /* AppDelegate.m in Sources */,
+				1F5EAC3018A471220080B598 /* AddGoalViewController.m in Sources */,
+				1F5EAC2D18A471140080B598 /* GoalListViewController.m in Sources */,
 				1F5EAC0518A470C30080B598 /* main.m in Sources */,
 				1F5EAC0C18A470C30080B598 /* DailyGoals.xcdatamodeld in Sources */,
+				1F5EAC3318A471440080B598 /* TheBackgrounds.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +473,7 @@
 				1F5EAC2718A470C30080B598 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F5EAC2818A470C30080B598 /* Build configuration list for PBXNativeTarget "DailyGoalsTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +482,7 @@
 				1F5EAC2A18A470C30080B598 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
