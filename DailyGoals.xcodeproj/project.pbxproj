@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F48C92118A738C3006CC915 /* GoalListTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48C92018A738C3006CC915 /* GoalListTable.m */; };
 		1F5EABF718A470C20080B598 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5EABF618A470C20080B598 /* Foundation.framework */; };
 		1F5EABF918A470C20080B598 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5EABF818A470C20080B598 /* CoreGraphics.framework */; };
 		1F5EABFB18A470C20080B598 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5EABFA18A470C20080B598 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F48C91F18A738C3006CC915 /* GoalListTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalListTable.h; sourceTree = "<group>"; };
+		1F48C92018A738C3006CC915 /* GoalListTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalListTable.m; sourceTree = "<group>"; };
 		1F5EABF318A470C20080B598 /* DailyGoals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyGoals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5EABF618A470C20080B598 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1F5EABF818A470C20080B598 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -138,6 +141,8 @@
 				1F5EAC3118A471440080B598 /* TheBackgrounds.h */,
 				1F5EAC3218A471440080B598 /* TheBackgrounds.m */,
 				1F5EABFF18A470C20080B598 /* Supporting Files */,
+				1F48C91F18A738C3006CC915 /* GoalListTable.h */,
+				1F48C92018A738C3006CC915 /* GoalListTable.m */,
 			);
 			path = DailyGoals;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				1F5EAC0918A470C30080B598 /* AppDelegate.m in Sources */,
 				1F5EAC3018A471220080B598 /* AddGoalViewController.m in Sources */,
 				1F5EAC2D18A471140080B598 /* GoalListViewController.m in Sources */,
+				1F48C92118A738C3006CC915 /* GoalListTable.m in Sources */,
 				1F5EAC0518A470C30080B598 /* main.m in Sources */,
 				1F5EAC0C18A470C30080B598 /* DailyGoals.xcdatamodeld in Sources */,
 				1F5EAC3318A471440080B598 /* TheBackgrounds.m in Sources */,

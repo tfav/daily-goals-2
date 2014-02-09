@@ -33,6 +33,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //TF
+    //Set nav bar to transparent
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    
 	// Do any additional setup after loading the view.
     //RW
     //self.tableView.backgroundColor = [UIColor clearColor];
@@ -56,6 +65,8 @@
     {    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"nightBg.png"]];
     }
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
