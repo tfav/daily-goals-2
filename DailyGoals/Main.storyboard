@@ -19,7 +19,7 @@
                             <containerView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nk0-tH-81a">
                                 <rect key="frame" x="0.0" y="65" width="320" height="288"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="H6q-Tz-1ku" kind="embed" id="5tM-yU-nkM"/>
                                 </connections>
@@ -88,14 +88,15 @@
                         <viewControllerLayoutGuide type="top" id="1dD-to-iAN"/>
                         <viewControllerLayoutGuide type="bottom" id="VbD-2T-C2S"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SGG-LS-oXo">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="SGG-LS-oXo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Goal" textAlignment="center" minimumFontSize="26" background="navBarBG" translatesAutoresizingMaskIntoConstraints="NO" id="aUk-nI-FqJ">
-                                <rect key="frame" x="0.0" y="259" width="320" height="50"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Goal:" textAlignment="center" minimumFontSize="26" background="navBarBG" translatesAutoresizingMaskIntoConstraints="NO" id="aUk-nI-FqJ">
+                                <rect key="frame" x="0.0" y="67" width="320" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -113,7 +114,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPU-As-aKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nQy-WK-3pk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1468" y="81"/>
+            <point key="canvasLocation" x="1970" y="-602"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zwa-wr-DKO">
