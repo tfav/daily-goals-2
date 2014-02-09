@@ -34,10 +34,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    //RW
-    //self.tableView.backgroundColor = [UIColor clearColor];
-    //self.tableView.opaque = NO;
-    //[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"nav_bar"] forBarMetrics:UIBarMetricsDefault];
     NSDate *currentTime = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"hh"];
