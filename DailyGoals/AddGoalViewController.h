@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GoalItem.h"
 @interface AddGoalViewController : UIViewController
+
+@property GoalItem *goalItem;
 
 @end

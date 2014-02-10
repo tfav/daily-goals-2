@@ -9,10 +9,23 @@
 #import "AddGoalViewController.h"
 
 @interface AddGoalViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
 
 @end
 
 @implementation AddGoalViewController
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if (sender != self.addButton) return;
+    if (self.textField.text.length > 0) {
+        self.goalItem = [[GoalItem alloc] init];
+        self.goalItem.goalName = self.textField.text;
+        self.goalItem.completed = NO;
+    }
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

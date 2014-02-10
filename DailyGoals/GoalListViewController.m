@@ -9,17 +9,12 @@
 #import "GoalListViewController.h"
 #import "GoalItem.h"
 #import "GoalListTableViewController.h"
-
+#import "AddGoalViewController.h"
 @interface GoalListViewController ()
 
 @end
 
 @implementation GoalListViewController
-
-- (IBAction)unwindToList:(UIStoryboardSegue *)segue
-{
-    
-}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

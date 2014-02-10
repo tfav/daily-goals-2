@@ -8,6 +8,7 @@
 
 #import "GoalListTableViewController.h"
 #import "GoalItem.h"
+#import "AddGoalViewController.h"
 
 @interface GoalListTableViewController ()
 
@@ -17,16 +18,20 @@
 
 @implementation GoalListTableViewController
 
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue
+{
+    AddGoalViewController *source = [segue sourceViewController];
+    GoalItem *item = source.goalItem;
+    if (item != nil) {
+        [self.goalItems addObject:item];
+        [self.tableView reloadData];
+    }
+}
+
 -(void)loadInitialData {
     GoalItem *item1 = [[GoalItem alloc] init];
-    item1.goalName = @"Buy milk";
+    item1.goalName = @"This is an initial item. Hardcoded in. What happens if it is too long?";
     [self.goalItems addObject:item1];
-    GoalItem *item2 = [[GoalItem alloc] init];
-    item2.goalName = @"Polish shoes";
-    [self.goalItems addObject:item2];
-    GoalItem *item3 = [[GoalItem alloc] init];
-    item3.goalName = @"Buy a computer";
-    [self.goalItems addObject:item3];
 
 }
 
