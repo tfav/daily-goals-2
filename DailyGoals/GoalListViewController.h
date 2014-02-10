@@ -10,4 +10,6 @@
 
 @interface GoalListViewController : UIViewController
 
+@property (nonatomic, strong) NSMutableArray *goalItems;
+
 @end

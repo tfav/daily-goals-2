@@ -7,6 +7,8 @@
 //
 
 #import "GoalListViewController.h"
+#import "GoalItem.h"
+#import "GoalListTableViewController.h"
 
 @interface GoalListViewController ()
 
@@ -20,7 +22,6 @@
 }
 
 
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,6 +30,7 @@
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
@@ -41,6 +43,8 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}]; //set title to white color
+    
     
 	// Do any additional setup after loading the view.
     NSDate *currentTime = [NSDate date];
