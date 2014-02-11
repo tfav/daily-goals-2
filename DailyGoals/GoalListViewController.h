@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GoalListTableViewController.h"
 
 @interface GoalListViewController : UIViewController
 
 @property (nonatomic, strong) NSMutableArray *goalItems;
 
+-(void)addCancelButton;
 
 @end

@@ -10,6 +10,6 @@
 #import "AppDelegate.h"
 
 @interface GoalListTableViewController : UITableViewController
-
+-(void)exitEditMode;
 
 @end

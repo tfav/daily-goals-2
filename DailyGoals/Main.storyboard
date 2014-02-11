@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Goal List View Controller - Title-->
+        <!--Goal List View Controller - Today-->
         <scene sceneID="z5W-lh-nvK">
             <objects>
                 <viewController extendedLayoutIncludesOpaqueBars="YES" id="Po6-nD-NHk" customClass="GoalListViewController" sceneMemberID="viewController">
@@ -57,14 +57,7 @@
                             <constraint firstItem="Ghp-PV-mAX" firstAttribute="leading" secondItem="iR7-Ki-MzK" secondAttribute="leading" constant="20" id="VUY-zt-KwQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Gam-1o-57W">
-                        <barButtonItem key="leftBarButtonItem" title="Prev" id="uFj-vB-CHA">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="0Lg-iV-7sF">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Today" id="Gam-1o-57W"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puc-S0-ChE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

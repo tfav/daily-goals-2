@@ -12,11 +12,13 @@
 #import "AppDelegate.h"
 #import "GoalEntity.h"
 #import "EditGoalViewController.h"
+#import "GoalListViewController.h"
+
 
 @interface GoalListTableViewController ()
 @property (nonatomic, strong) NSArray *fetchedGoalsArray;
 @property NSMutableArray *goalItems;
-
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @end
 
 @implementation GoalListTableViewController
@@ -59,15 +61,13 @@
 //    self.goalItems = [[NSMutableArray alloc]init];
 //    [self loadInitialData];
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    self.managedObjectContext = appDelegate.managedObjectContext;
     
-    self.fetchedGoalsArray = [appDelegate getAllGoals];
+    self.fetchedGoalsArray = [[appDelegate getAllGoals]mutableCopy];
+    
+    
     [self.tableView reloadData];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -97,6 +97,16 @@
     GoalEntity *goalItem = [self.fetchedGoalsArray objectAtIndex:indexPath.row];
     cell.textLabel.text = goalItem.goalName;
     
+    //Detect right swipe
+    UISwipeGestureRecognizer *gestureRight =[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rowSwiped)];
+    [gestureRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    [cell addGestureRecognizer:gestureRight];
+    //Detect left swipe
+    UISwipeGestureRecognizer *gestureLeft =[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rowSwiped)];
+    [gestureLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [cell addGestureRecognizer:gestureLeft];
+    
+    
     return cell;
 }
 
@@ -106,6 +116,22 @@
     editController.selectedGoal = [self.fetchedGoalsArray objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:editController animated:YES];
 }
+
+
+-(void)rowSwiped
+
+{
+    self.tableView.editing = !self.tableView.editing;
+    
+    NSLog(@"Swipe Detected!!");
+
+
+}
+-(void)exitEditMode
+{
+    [self.tableView setEditing:NO animated:YES];
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -115,19 +141,29 @@
 }
 */
 
-/*
-// Override to support editing the table view.
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        [tableView beginUpdates];
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
+        [self.managedObjectContext deleteObject:[self.fetchedGoalsArray objectAtIndex:indexPath.row]];
+        NSError *error;
+        if (![self.managedObjectContext save:&error]) {
+            NSLog(@"Couldn't delete %@", [error localizedDescription]);
+        }
+        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        self.fetchedGoalsArray = [appDelegate getAllGoals];
+        [self.tableView setEditing:NO animated:YES];
+        [tableView endUpdates];
+    }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
 /*
 // Override to support rearranging the table view.

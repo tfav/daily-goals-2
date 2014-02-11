@@ -10,6 +10,7 @@
 #import "GoalItem.h"
 #import "GoalListTableViewController.h"
 #import "AddGoalViewController.h"
+
 @interface GoalListViewController ()
 
 @end
@@ -61,7 +62,15 @@
     }
 }
 
+-(void)addCancelButton {
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:self.editButtonItem.style target:self action:@selector(editCanceled)];
+    NSLog(@"Cancel button should be added.");
+    
+}
 
+-(void)editCanceled {
+
+}
 
 - (void)didReceiveMemoryWarning
 {
