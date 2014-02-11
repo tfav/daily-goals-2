@@ -30,6 +30,22 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    
+   //Pick the time to set the notification for, currently hard coded in.
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:[NSDate date]];
+    [components setHour:9];
+    [components setMinute:0];
+    
+    //The actual notification, receives time to send from above.
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.repeatInterval = NSDayCalendarUnit;
+    [notification setAlertBody:@"Have you set your goals for today?"];
+    [notification setFireDate: [calendar dateFromComponents:components]];
+    [notification setTimeZone:[NSTimeZone defaultTimeZone]];
+    [application setScheduledLocalNotifications:[NSArray arrayWithObject:notification]];
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -133,6 +149,11 @@
     }    
     
     return _persistentStoreCoordinator;
+}
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    
 }
 
 #pragma mark - Get all Goals

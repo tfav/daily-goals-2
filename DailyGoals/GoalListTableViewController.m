@@ -19,32 +19,20 @@
 @property (nonatomic, strong) NSArray *fetchedGoalsArray;
 @property NSMutableArray *goalItems;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+
 @end
 
 @implementation GoalListTableViewController
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
 {
-//    AddGoalViewController *source = [segue sourceViewController];
-//    GoalItem *item = source.goalItem;
-//    if (item != nil) {
-//        [self.goalItems addObject:item];
-//        [self.tableView reloadData];
-//    }
-   
+
+    //Get the goals from the delegate, then reload the data after we unwind from Add Goal Controller
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    
     self.fetchedGoalsArray = [appDelegate getAllGoals];
-    [self.tableView reloadData];
 
 }
 
-//-(void)loadInitialData {
-//    GoalItem *item1 = [[GoalItem alloc] init];
-//    item1.goalName = @"This is an initial item. Hardcoded in. What happens if it is too long?";
-//    [self.goalItems addObject:item1];
-//
-//}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -58,17 +46,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    self.goalItems = [[NSMutableArray alloc]init];
-//    [self loadInitialData];
+    
+    //Part of core data, getting the managedObjectContext from the appDelegate
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     self.managedObjectContext = appDelegate.managedObjectContext;
     
+    //Allowing the array to be editable for deleting rows
     self.fetchedGoalsArray = [[appDelegate getAllGoals]mutableCopy];
     
-    
-    [self.tableView reloadData];
 
 }
+
+//Reload the data in the table after the view appears again (for editing and creating)
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.tableView reloadData];
@@ -94,57 +83,50 @@
     static NSString *CellIdentifier = @"ListPrototypeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    //Get the goal data, then set the goal name to the title of the cell
     GoalEntity *goalItem = [self.fetchedGoalsArray objectAtIndex:indexPath.row];
     cell.textLabel.text = goalItem.goalName;
     
-    //Detect right swipe
-//    UISwipeGestureRecognizer *gestureRight =[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rowSwiped)];
-//    [gestureRight setDirection:UISwipeGestureRecognizerDirectionRight];
-//    [cell addGestureRecognizer:gestureRight];
-    //Detect left swipe
+    //Detect left swipe for delete mode
     UISwipeGestureRecognizer *gestureLeft =[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rowSwiped)];
     [gestureLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
     [cell addGestureRecognizer:gestureLeft];
-    
-    
+
+    UILongPressGestureRecognizer *longTapDetected = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longTapDetected)];
+    [cell addGestureRecognizer:longTapDetected];
+
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+
+-(void)longTapDetected
 {
+    
+}
+
+//Enable editing when a row is selected
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
     EditGoalViewController *editController = [self.storyboard instantiateViewControllerWithIdentifier:@"EditGoalViewControllerIdentifier"];
     editController.selectedGoal = [self.fetchedGoalsArray objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:editController animated:YES];
+    
 }
 
-
+//Enter editing mode if the row is swiped...called in cellForRowAtIndexPath
 -(void)rowSwiped
 
 {
     self.tableView.editing = !self.tableView.editing;
+//  NSLog(@"Swipe Detected!!");
     
-    NSLog(@"Swipe Detected!!");
-
-
-}
--(void)exitEditMode
-{
-    [self.tableView setEditing:NO animated:YES];
 }
 
+//Set row height
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 55;
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -153,8 +135,9 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
         [tableView beginUpdates];
+        
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
         [self.managedObjectContext deleteObject:[self.fetchedGoalsArray objectAtIndex:indexPath.row]];
         NSError *error;
         if (![self.managedObjectContext save:&error]) {

@@ -31,6 +31,7 @@
 		1F5EAC3518A471A20080B598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5EAC3418A471A20080B598 /* Main.storyboard */; };
 		1FD476E018A9A60C007363E5 /* GoalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD476DF18A9A60C007363E5 /* GoalEntity.m */; };
 		1FD476E318A9ACDB007363E5 /* EditGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD476E218A9ACDB007363E5 /* EditGoalViewController.m */; };
+		1FD476E618AACCA9007363E5 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD476E518AACCA9007363E5 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		1FD476DF18A9A60C007363E5 /* GoalEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalEntity.m; sourceTree = "<group>"; };
 		1FD476E118A9ACDB007363E5 /* EditGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditGoalViewController.h; sourceTree = "<group>"; };
 		1FD476E218A9ACDB007363E5 /* EditGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditGoalViewController.m; sourceTree = "<group>"; };
+		1FD476E418AACCA9007363E5 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		1FD476E518AACCA9007363E5 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 		1F48C92B18A88A90006CC915 /* UnusedForNow */ = {
 			isa = PBXGroup;
 			children = (
+				1FD476E418AACCA9007363E5 /* SettingsViewController.h */,
+				1FD476E518AACCA9007363E5 /* SettingsViewController.m */,
 				1F48C92218A8488D006CC915 /* GoalItem.h */,
 				1F48C92318A8488D006CC915 /* GoalItem.m */,
 				1F5EAC3118A471440080B598 /* TheBackgrounds.h */,
@@ -306,6 +311,7 @@
 				1F48C92418A8488D006CC915 /* GoalItem.m in Sources */,
 				1F48C92718A84C1A006CC915 /* GoalListTable.m in Sources */,
 				1F5EAC0918A470C30080B598 /* AppDelegate.m in Sources */,
+				1FD476E618AACCA9007363E5 /* SettingsViewController.m in Sources */,
 				1FD476E318A9ACDB007363E5 /* EditGoalViewController.m in Sources */,
 				1FD476E018A9A60C007363E5 /* GoalEntity.m in Sources */,
 				1F5EAC3018A471220080B598 /* AddGoalViewController.m in Sources */,
