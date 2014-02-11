@@ -122,9 +122,13 @@
 //  NSLog(@"Swipe Detected!!");
     
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
+}
 
 //Set row height
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     return 55;
 }
 
