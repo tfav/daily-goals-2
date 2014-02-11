@@ -29,6 +29,8 @@
 		1F5EAC3018A471220080B598 /* AddGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAC2F18A471220080B598 /* AddGoalViewController.m */; };
 		1F5EAC3318A471440080B598 /* TheBackgrounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5EAC3218A471440080B598 /* TheBackgrounds.m */; };
 		1F5EAC3518A471A20080B598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5EAC3418A471A20080B598 /* Main.storyboard */; };
+		1FD476E018A9A60C007363E5 /* GoalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD476DF18A9A60C007363E5 /* GoalEntity.m */; };
+		1FD476E318A9ACDB007363E5 /* EditGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD476E218A9ACDB007363E5 /* EditGoalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,10 @@
 		1F5EAC3118A471440080B598 /* TheBackgrounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheBackgrounds.h; sourceTree = "<group>"; };
 		1F5EAC3218A471440080B598 /* TheBackgrounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheBackgrounds.m; sourceTree = "<group>"; };
 		1F5EAC3418A471A20080B598 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1FD476DE18A9A60C007363E5 /* GoalEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalEntity.h; sourceTree = "<group>"; };
+		1FD476DF18A9A60C007363E5 /* GoalEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalEntity.m; sourceTree = "<group>"; };
+		1FD476E118A9ACDB007363E5 /* EditGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditGoalViewController.h; sourceTree = "<group>"; };
+		1FD476E218A9ACDB007363E5 /* EditGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditGoalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,8 @@
 		1F48C92B18A88A90006CC915 /* UnusedForNow */ = {
 			isa = PBXGroup;
 			children = (
+				1F48C92218A8488D006CC915 /* GoalItem.h */,
+				1F48C92318A8488D006CC915 /* GoalItem.m */,
 				1F5EAC3118A471440080B598 /* TheBackgrounds.h */,
 				1F5EAC3218A471440080B598 /* TheBackgrounds.m */,
 				1F48C92518A84C1A006CC915 /* GoalListTable.h */,
@@ -147,18 +155,20 @@
 			isa = PBXGroup;
 			children = (
 				1F5EAC3418A471A20080B598 /* Main.storyboard */,
-				1F48C92218A8488D006CC915 /* GoalItem.h */,
-				1F48C92318A8488D006CC915 /* GoalItem.m */,
 				1F5EAC0718A470C30080B598 /* AppDelegate.h */,
 				1F5EAC0818A470C30080B598 /* AppDelegate.m */,
-				1F5EAC0D18A470C30080B598 /* Images.xcassets */,
+				1FD476DE18A9A60C007363E5 /* GoalEntity.h */,
+				1FD476DF18A9A60C007363E5 /* GoalEntity.m */,
 				1F5EAC0A18A470C30080B598 /* DailyGoals.xcdatamodeld */,
+				1F5EAC0D18A470C30080B598 /* Images.xcassets */,
 				1F5EAC2B18A471140080B598 /* GoalListViewController.h */,
 				1F5EAC2C18A471140080B598 /* GoalListViewController.m */,
-				1F5EAC2E18A471220080B598 /* AddGoalViewController.h */,
-				1F5EAC2F18A471220080B598 /* AddGoalViewController.m */,
 				1F48C92818A888B1006CC915 /* GoalListTableViewController.h */,
 				1F48C92918A888B1006CC915 /* GoalListTableViewController.m */,
+				1F5EAC2E18A471220080B598 /* AddGoalViewController.h */,
+				1F5EAC2F18A471220080B598 /* AddGoalViewController.m */,
+				1FD476E118A9ACDB007363E5 /* EditGoalViewController.h */,
+				1FD476E218A9ACDB007363E5 /* EditGoalViewController.m */,
 				1F5EABFF18A470C20080B598 /* Supporting Files */,
 				1F48C92B18A88A90006CC915 /* UnusedForNow */,
 			);
@@ -293,6 +303,8 @@
 				1F48C92418A8488D006CC915 /* GoalItem.m in Sources */,
 				1F48C92718A84C1A006CC915 /* GoalListTable.m in Sources */,
 				1F5EAC0918A470C30080B598 /* AppDelegate.m in Sources */,
+				1FD476E318A9ACDB007363E5 /* EditGoalViewController.m in Sources */,
+				1FD476E018A9A60C007363E5 /* GoalEntity.m in Sources */,
 				1F5EAC3018A471220080B598 /* AddGoalViewController.m in Sources */,
 				1F5EAC2D18A471140080B598 /* GoalListViewController.m in Sources */,
 				1F5EAC0518A470C30080B598 /* main.m in Sources */,

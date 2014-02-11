@@ -135,6 +135,22 @@
     return _persistentStoreCoordinator;
 }
 
+#pragma mark - Get all Goals
+-(NSArray *)getAllGoals
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"GoalEntity" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error;
+    
+    NSArray *fetchedGoals = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    return fetchedGoals;
+}
+
+
 #pragma mark - Application's Documents directory
 
 // Returns the URL to the application's Documents directory.

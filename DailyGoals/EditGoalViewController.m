@@ -1,21 +1,50 @@
 //
-//  GoalListViewController.m
+//  EditGoalViewController.m
 //  DailyGoals
 //
-//  Created by Travis Favaron on 2/6/14.
+//  Created by Travis Favaron on 2/10/14.
 //  Copyright (c) 2014 Travis Favaron. All rights reserved.
 //
 
-#import "GoalListViewController.h"
-#import "GoalItem.h"
-#import "GoalListTableViewController.h"
-#import "AddGoalViewController.h"
-@interface GoalListViewController ()
+#import "EditGoalViewController.h"
+#import "GoalEntity.h"
+#import "AppDelegate.h"
+
+@interface EditGoalViewController ()
+
+
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
 
 @end
 
-@implementation GoalListViewController
+@implementation EditGoalViewController
 
+
+-(void)initialSetup
+{
+    self.textField.text = self.selectedGoal.goalName;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:self.editButtonItem.style target:self action:@selector(doneButtonPressed)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:self.editButtonItem.style target:self action:@selector(cancelButtonPressed)];
+}
+-(void)cancelButtonPressed
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)doneButtonPressed
+{
+    self.selectedGoal.goalName = self.textField.text;
+    
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Whoops, couldn't save %@", [error localizedDescription]);
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,22 +55,20 @@
     return self;
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    self.managedObjectContext = appDelegate.managedObjectContext;
     
-    //TF
-    //Set nav bar to transparent
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
-                                                  forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
-    self.navigationController.navigationBar.translucent = YES;
-    self.navigationController.view.backgroundColor = [UIColor clearColor];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}]; //set title to white color
+    [self initialSetup];
+	
     
     
-	// Do any additional setup after loading the view.
+    
+    
+    
+    // Do any additional setup after loading the view.
     NSDate *currentTime = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"hh"];
@@ -60,8 +87,6 @@
     {    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"nightBg.png"]];
     }
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {
