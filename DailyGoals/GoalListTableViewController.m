@@ -98,9 +98,9 @@
     cell.textLabel.text = goalItem.goalName;
     
     //Detect right swipe
-    UISwipeGestureRecognizer *gestureRight =[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rowSwiped)];
-    [gestureRight setDirection:UISwipeGestureRecognizerDirectionRight];
-    [cell addGestureRecognizer:gestureRight];
+//    UISwipeGestureRecognizer *gestureRight =[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rowSwiped)];
+//    [gestureRight setDirection:UISwipeGestureRecognizerDirectionRight];
+//    [cell addGestureRecognizer:gestureRight];
     //Detect left swipe
     UISwipeGestureRecognizer *gestureLeft =[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rowSwiped)];
     [gestureLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
@@ -131,6 +131,11 @@
 {
     [self.tableView setEditing:NO animated:YES];
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 55;
+}
+
 
 /*
 // Override to support conditional editing of the table view.

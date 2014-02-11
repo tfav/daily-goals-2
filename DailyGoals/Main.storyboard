@@ -101,7 +101,7 @@
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -113,11 +113,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add New Goal" id="QeK-qD-wrq">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Oa4-DC-ER7">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="nQy-WK-3pk" kind="unwind" unwindAction="unwindToList:" id="Wkt-3j-Rla"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="1UQ-I7-tBc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="saveData:" destination="vb1-A4-0pX" id="aio-8d-qJ3"/>
                                 <segue destination="nQy-WK-3pk" kind="unwind" unwindAction="unwindToList:" id="69B-vF-DLe"/>
@@ -158,6 +160,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Edit Goal" id="DJd-Nt-QUh">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="xWF-op-YpM">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="3cG-Eo-fwE" kind="unwind" unwindAction="unwindToList:" id="BjN-wU-hNG"/>
                             </connections>
@@ -184,18 +187,18 @@
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ListPrototypeCell" textLabel="Nvi-nX-xQj" rowHeight="60" style="IBUITableViewCellStyleDefault" id="EdQ-Au-J5Q">
-                                <rect key="frame" x="0.0" y="22" width="320" height="60"/>
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ListPrototypeCell" textLabel="Nvi-nX-xQj" style="IBUITableViewCellStyleDefault" id="EdQ-Au-J5Q">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EdQ-Au-J5Q" id="32L-iP-1hO">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" id="Nvi-nX-xQj">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="59"/>
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>

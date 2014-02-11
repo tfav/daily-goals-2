@@ -251,6 +251,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Travis Favaron";
 				TargetAttributes = {
+					1F5EABF218A470C20080B598 = {
+						DevelopmentTeam = 6HT4WQWB93;
+					};
 					1F5EAC1218A470C30080B598 = {
 						TestTargetID = 1F5EABF218A470C20080B598;
 					};
@@ -429,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DailyGoals/DailyGoals-Prefix.pch";
 				INFOPLIST_FILE = "DailyGoals/DailyGoals-Info.plist";
@@ -442,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DailyGoals/DailyGoals-Prefix.pch";
 				INFOPLIST_FILE = "DailyGoals/DailyGoals-Info.plist";
