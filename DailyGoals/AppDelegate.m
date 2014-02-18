@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "GoalListViewController.h"
+#import "AddGoalViewController.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -16,7 +19,49 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    NSUserDefaults * standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if(![standardUserDefaults boolForKey:@"hasSeenTutorial"]){ //this 'if statement' checks to see if welcome view controller has been viewed before and sets the root view controller to the welcome screen or the goal list screen accordingly.
+        [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"hasSeenTutorial"];
+        UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"welcomeViewController"];
+        self.window.rootViewController = viewController;
+    } else {
+        UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"GoalListViewController"];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSeenTutorial"];
+        self.window.rootViewController = viewController;
+    }
+    [standardUserDefaults synchronize]; // syncronize stnadardUserDefaults so 'hasSeenTutorial' will be remembered upon next app opening
+    
+    [self.window makeKeyAndVisible];
+    
+    // BEGIN default code for PARSE push notifications. Two additional methods are added below: didRegisterForRemoteNotificationsWithDeviceToken and didReceiveRemoteNotification
+    [Parse setApplicationId:@"6PXvfKefTbIqaanI6dxXTdnNCIYrF1HIteeWIey5"
+                  clientKey:@"Qn6QwfOBeF9fiHji7NgLhbJFGoGA54z7FdwRU5ym"]; // these ID's need to be updated 2/16/14
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+     UIRemoteNotificationTypeAlert|
+     UIRemoteNotificationTypeSound];
+    
+    // Override point for customization after application launch.
+    
+
     return YES;
+}
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

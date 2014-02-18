@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1340B918B2F02C00E51C8E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340B818B2F02C00E51C8E /* SystemConfiguration.framework */; };
+		1F1340BB18B2F03500E51C8E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340BA18B2F03500E51C8E /* StoreKit.framework */; };
+		1F1340BD18B2F03D00E51C8E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340BC18B2F03D00E51C8E /* Security.framework */; };
+		1F1340BF18B2F04D00E51C8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340BE18B2F04D00E51C8E /* QuartzCore.framework */; };
+		1F1340C118B2F05900E51C8E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340C018B2F05900E51C8E /* MobileCoreServices.framework */; };
+		1F1340C318B2F07700E51C8E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340C218B2F07700E51C8E /* libz.dylib */; };
+		1F1340C518B2F07E00E51C8E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340C418B2F07E00E51C8E /* CoreLocation.framework */; };
+		1F1340C718B2F08700E51C8E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340C618B2F08700E51C8E /* CFNetwork.framework */; };
+		1F1340C918B2F09200E51C8E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340C818B2F09200E51C8E /* AudioToolbox.framework */; };
+		1F1340CD18B2F0D200E51C8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340CC18B2F0D100E51C8E /* Parse.framework */; };
 		1F48C92418A8488D006CC915 /* GoalItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48C92318A8488D006CC915 /* GoalItem.m */; };
 		1F48C92718A84C1A006CC915 /* GoalListTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48C92618A84C1A006CC915 /* GoalListTable.m */; };
 		1F48C92A18A888B1006CC915 /* GoalListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48C92918A888B1006CC915 /* GoalListTableViewController.m */; };
@@ -45,6 +55,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F1340B818B2F02C00E51C8E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1F1340BA18B2F03500E51C8E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1F1340BC18B2F03D00E51C8E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1F1340BE18B2F04D00E51C8E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1F1340C018B2F05900E51C8E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1F1340C218B2F07700E51C8E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		1F1340C418B2F07E00E51C8E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1F1340C618B2F08700E51C8E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1F1340C818B2F09200E51C8E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1F1340CA18B2F09F00E51C8E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../Ross Wehner/Build 2.16.14/DailyGoals/Parse.framework"; sourceTree = "<group>"; };
+		1F1340CC18B2F0D100E51C8E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = DailyGoals/Parse.framework; sourceTree = "<group>"; };
 		1F48C92218A8488D006CC915 /* GoalItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalItem.h; sourceTree = "<group>"; };
 		1F48C92318A8488D006CC915 /* GoalItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalItem.m; sourceTree = "<group>"; };
 		1F48C92518A84C1A006CC915 /* GoalListTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalListTable.h; sourceTree = "<group>"; };
@@ -89,6 +110,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1340CD18B2F0D200E51C8E /* Parse.framework in Frameworks */,
+				1F1340C918B2F09200E51C8E /* AudioToolbox.framework in Frameworks */,
+				1F1340C718B2F08700E51C8E /* CFNetwork.framework in Frameworks */,
+				1F1340C518B2F07E00E51C8E /* CoreLocation.framework in Frameworks */,
+				1F1340C318B2F07700E51C8E /* libz.dylib in Frameworks */,
+				1F1340C118B2F05900E51C8E /* MobileCoreServices.framework in Frameworks */,
+				1F1340BF18B2F04D00E51C8E /* QuartzCore.framework in Frameworks */,
+				1F1340BD18B2F03D00E51C8E /* Security.framework in Frameworks */,
+				1F1340BB18B2F03500E51C8E /* StoreKit.framework in Frameworks */,
+				1F1340B918B2F02C00E51C8E /* SystemConfiguration.framework in Frameworks */,
 				1F5EABF918A470C20080B598 /* CoreGraphics.framework in Frameworks */,
 				1F5EABFD18A470C20080B598 /* CoreData.framework in Frameworks */,
 				1F5EABFB18A470C20080B598 /* UIKit.framework in Frameworks */,
@@ -147,6 +178,17 @@
 		1F5EABF518A470C20080B598 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F1340CC18B2F0D100E51C8E /* Parse.framework */,
+				1F1340CA18B2F09F00E51C8E /* Parse.framework */,
+				1F1340C818B2F09200E51C8E /* AudioToolbox.framework */,
+				1F1340C618B2F08700E51C8E /* CFNetwork.framework */,
+				1F1340C418B2F07E00E51C8E /* CoreLocation.framework */,
+				1F1340C218B2F07700E51C8E /* libz.dylib */,
+				1F1340C018B2F05900E51C8E /* MobileCoreServices.framework */,
+				1F1340BE18B2F04D00E51C8E /* QuartzCore.framework */,
+				1F1340BC18B2F03D00E51C8E /* Security.framework */,
+				1F1340BA18B2F03500E51C8E /* StoreKit.framework */,
+				1F1340B818B2F02C00E51C8E /* SystemConfiguration.framework */,
 				1F5EABF618A470C20080B598 /* Foundation.framework */,
 				1F5EABF818A470C20080B598 /* CoreGraphics.framework */,
 				1F5EABFA18A470C20080B598 /* UIKit.framework */,
@@ -439,9 +481,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/travis/Dropbox/Ross\\ Wehner/Build\\ 2.16.14/DailyGoals",
+					"/Users/travis/Dropbox/XcodeProjects/daily-v2/DailyGoals/DailyGoals",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DailyGoals/DailyGoals-Prefix.pch";
 				INFOPLIST_FILE = "DailyGoals/DailyGoals-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -453,9 +501,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/travis/Dropbox/Ross\\ Wehner/Build\\ 2.16.14/DailyGoals",
+					"/Users/travis/Dropbox/XcodeProjects/daily-v2/DailyGoals/DailyGoals",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DailyGoals/DailyGoals-Prefix.pch";
 				INFOPLIST_FILE = "DailyGoals/DailyGoals-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

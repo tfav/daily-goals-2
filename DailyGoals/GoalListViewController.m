@@ -32,6 +32,10 @@
 {
     [super viewDidLoad];
     
+    //set welcome/intro page as viewed so it won't appear again.
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSeenTutorial"];
+    
+    
     //TF
     //Set nav bar to transparent
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
