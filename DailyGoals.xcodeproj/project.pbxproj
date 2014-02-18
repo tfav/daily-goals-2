@@ -16,7 +16,6 @@
 		1F1340C518B2F07E00E51C8E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340C418B2F07E00E51C8E /* CoreLocation.framework */; };
 		1F1340C718B2F08700E51C8E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340C618B2F08700E51C8E /* CFNetwork.framework */; };
 		1F1340C918B2F09200E51C8E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340C818B2F09200E51C8E /* AudioToolbox.framework */; };
-		1F1340D018B2F90B00E51C8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340CF18B2F90B00E51C8E /* Parse.framework */; };
 		1F48C92418A8488D006CC915 /* GoalItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48C92318A8488D006CC915 /* GoalItem.m */; };
 		1F48C92718A84C1A006CC915 /* GoalListTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48C92618A84C1A006CC915 /* GoalListTable.m */; };
 		1F48C92A18A888B1006CC915 /* GoalListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48C92918A888B1006CC915 /* GoalListTableViewController.m */; };
@@ -42,6 +41,7 @@
 		1FD476E018A9A60C007363E5 /* GoalEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD476DF18A9A60C007363E5 /* GoalEntity.m */; };
 		1FD476E318A9ACDB007363E5 /* EditGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD476E218A9ACDB007363E5 /* EditGoalViewController.m */; };
 		1FD476E618AACCA9007363E5 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD476E518AACCA9007363E5 /* SettingsViewController.m */; };
+		7A7142D918B2F9E800A76000 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7142D818B2F9E800A76000 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,6 @@
 		1F1340C418B2F07E00E51C8E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1F1340C618B2F08700E51C8E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1F1340C818B2F09200E51C8E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		1F1340CF18B2F90B00E51C8E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = DailyGoals/Parse.framework; sourceTree = "<group>"; };
 		1F48C92218A8488D006CC915 /* GoalItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalItem.h; sourceTree = "<group>"; };
 		1F48C92318A8488D006CC915 /* GoalItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalItem.m; sourceTree = "<group>"; };
 		1F48C92518A84C1A006CC915 /* GoalListTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalListTable.h; sourceTree = "<group>"; };
@@ -102,6 +101,7 @@
 		1FD476E218A9ACDB007363E5 /* EditGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditGoalViewController.m; sourceTree = "<group>"; };
 		1FD476E418AACCA9007363E5 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		1FD476E518AACCA9007363E5 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		7A7142D818B2F9E800A76000 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = DailyGoals/Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F1340D018B2F90B00E51C8E /* Parse.framework in Frameworks */,
+				7A7142D918B2F9E800A76000 /* Parse.framework in Frameworks */,
 				1F1340C918B2F09200E51C8E /* AudioToolbox.framework in Frameworks */,
 				1F1340C718B2F08700E51C8E /* CFNetwork.framework in Frameworks */,
 				1F1340C518B2F07E00E51C8E /* CoreLocation.framework in Frameworks */,
@@ -177,7 +177,7 @@
 		1F5EABF518A470C20080B598 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1F1340CF18B2F90B00E51C8E /* Parse.framework */,
+				7A7142D818B2F9E800A76000 /* Parse.framework */,
 				1F1340C818B2F09200E51C8E /* AudioToolbox.framework */,
 				1F1340C618B2F08700E51C8E /* CFNetwork.framework */,
 				1F1340C418B2F07E00E51C8E /* CoreLocation.framework */,
@@ -483,6 +483,7 @@
 					"$(inherited)",
 					"/Users/travis/Dropbox/Ross\\ Wehner/Build\\ 2.16.14/DailyGoals",
 					"/Users/travis/Dropbox/XcodeProjects/daily-v2/DailyGoals/DailyGoals",
+					"/Users/rwehner186/Dropbox/Xcode_Projects/New_Daily_Goals/daily-goals-2/DailyGoals",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DailyGoals/DailyGoals-Prefix.pch";
@@ -503,6 +504,7 @@
 					"$(inherited)",
 					"/Users/travis/Dropbox/Ross\\ Wehner/Build\\ 2.16.14/DailyGoals",
 					"/Users/travis/Dropbox/XcodeProjects/daily-v2/DailyGoals/DailyGoals",
+					"/Users/rwehner186/Dropbox/Xcode_Projects/New_Daily_Goals/daily-goals-2/DailyGoals",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DailyGoals/DailyGoals-Prefix.pch";

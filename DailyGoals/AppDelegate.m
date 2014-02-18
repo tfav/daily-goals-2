@@ -35,7 +35,7 @@
     }
     [standardUserDefaults synchronize]; // syncronize stnadardUserDefaults so 'hasSeenTutorial' will be remembered upon next app opening
     
-    [self.window makeKeyAndVisible];
+    [self.window makeKeyAndVisible]; // commit assigned root view controller to storyboad
     
     // BEGIN default code for PARSE push notifications. Two additional methods are added below: didRegisterForRemoteNotificationsWithDeviceToken and didReceiveRemoteNotification
     [Parse setApplicationId:@"6PXvfKefTbIqaanI6dxXTdnNCIYrF1HIteeWIey5"
