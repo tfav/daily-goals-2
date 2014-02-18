@@ -16,7 +16,7 @@
 		1F1340C518B2F07E00E51C8E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340C418B2F07E00E51C8E /* CoreLocation.framework */; };
 		1F1340C718B2F08700E51C8E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340C618B2F08700E51C8E /* CFNetwork.framework */; };
 		1F1340C918B2F09200E51C8E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340C818B2F09200E51C8E /* AudioToolbox.framework */; };
-		1F1340CE18B2F7B200E51C8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340CC18B2F0D100E51C8E /* Parse.framework */; };
+		1F1340D018B2F90B00E51C8E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1340CF18B2F90B00E51C8E /* Parse.framework */; };
 		1F48C92418A8488D006CC915 /* GoalItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48C92318A8488D006CC915 /* GoalItem.m */; };
 		1F48C92718A84C1A006CC915 /* GoalListTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48C92618A84C1A006CC915 /* GoalListTable.m */; };
 		1F48C92A18A888B1006CC915 /* GoalListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F48C92918A888B1006CC915 /* GoalListTableViewController.m */; };
@@ -64,8 +64,7 @@
 		1F1340C418B2F07E00E51C8E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1F1340C618B2F08700E51C8E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1F1340C818B2F09200E51C8E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		1F1340CA18B2F09F00E51C8E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../Ross Wehner/Build 2.16.14/DailyGoals/Parse.framework"; sourceTree = "<group>"; };
-		1F1340CC18B2F0D100E51C8E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = DailyGoals/Parse.framework; sourceTree = "<group>"; };
+		1F1340CF18B2F90B00E51C8E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = DailyGoals/Parse.framework; sourceTree = "<group>"; };
 		1F48C92218A8488D006CC915 /* GoalItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalItem.h; sourceTree = "<group>"; };
 		1F48C92318A8488D006CC915 /* GoalItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalItem.m; sourceTree = "<group>"; };
 		1F48C92518A84C1A006CC915 /* GoalListTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalListTable.h; sourceTree = "<group>"; };
@@ -110,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F1340CE18B2F7B200E51C8E /* Parse.framework in Frameworks */,
+				1F1340D018B2F90B00E51C8E /* Parse.framework in Frameworks */,
 				1F1340C918B2F09200E51C8E /* AudioToolbox.framework in Frameworks */,
 				1F1340C718B2F08700E51C8E /* CFNetwork.framework in Frameworks */,
 				1F1340C518B2F07E00E51C8E /* CoreLocation.framework in Frameworks */,
@@ -178,8 +177,7 @@
 		1F5EABF518A470C20080B598 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1F1340CC18B2F0D100E51C8E /* Parse.framework */,
-				1F1340CA18B2F09F00E51C8E /* Parse.framework */,
+				1F1340CF18B2F90B00E51C8E /* Parse.framework */,
 				1F1340C818B2F09200E51C8E /* AudioToolbox.framework */,
 				1F1340C618B2F08700E51C8E /* CFNetwork.framework */,
 				1F1340C418B2F07E00E51C8E /* CoreLocation.framework */,
